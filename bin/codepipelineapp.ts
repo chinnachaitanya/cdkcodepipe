@@ -28,6 +28,16 @@ const s3Stack = new S3Stack(app, `S3Stack-${environment}`, {
   },
 });
 
+// // Create the Lambda stack
+// const lambdaStack = new LambdaStack(app, `LambdaStack-${environment}`, {
+//   sourceBucket: s3Stack.sourceBucket,          // Pass the actual bucket object
+//   destinationBucket: s3Stack.destinationBucket, // Pass the actual bucket object
+//   env: {
+//     account: process.env.CDK_DEFAULT_ACCOUNT,
+//     region: process.env.CDK_DEFAULT_REGION,
+//   },
+// });
+
 // Define the source stage with GitHub integration for CodePipeline
 const sourceOutput = new codepipeline.Artifact();
 const sourceAction = new codepipeline_actions.GitHubSourceAction({
@@ -40,7 +50,7 @@ const sourceAction = new codepipeline_actions.GitHubSourceAction({
 });
 
 // Create the CodePipeline stack
-new CodepipelineappStack(app, `CodepipelineappStack-${environment}`, {
+const pipelineStack = new CodepipelineappStack(app, `CodepipelineappStack-${environment}`, {
   sourceAction: sourceAction,  // Pass sourceAction
   sourceOutput: sourceOutput,  // Pass sourceOutput
   env: {
@@ -48,6 +58,21 @@ new CodepipelineappStack(app, `CodepipelineappStack-${environment}`, {
     region: process.env.CDK_DEFAULT_REGION,
   },
 });
+
+// Create the Lambda stack
+const lambdaStack = new LambdaStack(app, `LambdaStack-${environment}`, {
+  sourceBucketName: config.sourceBucketName,
+  destinationBucketName: config.destinationBucketName,
+  env: {
+    account: process.env.CDK_DEFAULT_ACCOUNT,
+    region: process.env.CDK_DEFAULT_REGION,
+  },
+});
+
+// Ensure the Lambda stack is deployed after the S3 and Pipeline stacks
+lambdaStack.addDependency(s3Stack);
+lambdaStack.addDependency(pipelineStack);
+
 // #!/usr/bin/env node
 // import 'source-map-support/register';
 // import * as cdk from 'aws-cdk-lib';

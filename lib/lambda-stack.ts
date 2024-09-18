@@ -59,13 +59,15 @@ import * as s3n from 'aws-cdk-lib/aws-s3-notifications';
 interface LambdaStackProps extends cdk.StackProps {
   sourceBucketName: string;
   destinationBucketName: string;
-}
+  }
 
 export class LambdaStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: LambdaStackProps) {
     super(scope, id, props);
 
-    // Import the S3 buckets
+    // // You can now use the buckets directly
+    // const sourceBucket = props.sourceBucket;
+    // const destinationBucket = props.destinationBucket;
     const sourceBucket = s3.Bucket.fromBucketName(this, 'SourceBucket', props.sourceBucketName);
     const destinationBucket = s3.Bucket.fromBucketName(this, 'DestinationBucket', props.destinationBucketName);
 

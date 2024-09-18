@@ -106,6 +106,42 @@ export class CodepipelineappStack extends cdk.Stack {
       actions: [sourceAction],
     });
 
+    // const buildSpecYAML = `
+    //     version: 0.2
+
+    //     phases:
+    //       install:
+    //         runtime-versions:
+    //           nodejs: 14
+    //         commands:
+    //           - npm install
+    //           - npm install -g aws-cdk
+
+    //       build:
+    //         commands:
+    //           - npm run build
+    //           - cdk synth --output ./cdk.out
+
+    //       post_build:
+    //         commands:
+    //           - echo Build completed on 'date'
+
+    //     artifacts:
+    //       base-directory: cdk.out
+    //       files:
+    //         - '**/*'
+
+    //     # Optional cache section
+    //     cache:
+    //       paths:
+    //         - 'node_modules/**/*'
+    //     `;
+
+    // const buildProject = new codebuild.PipelineProject(this, 'BuildProject', {
+    //   buildSpec: codebuild.BuildSpec.fromSourceString(buildSpecYAML),
+    // });
+
+
     // Define the build stage (optional, if Lambda assets need building)
     const buildProject = new codebuild.PipelineProject(this, 'BuildProject', {
       buildSpec: codebuild.BuildSpec.fromObject({
