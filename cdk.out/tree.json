@@ -400,7 +400,7 @@
                             },
                             "configuration": {
                               "Owner": "chinnachaitanya",
-                              "Repo": "cdk-codepipeline",
+                              "Repo": "cdkcodepipe",
                               "Branch": "main",
                               "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
                               "PollForSourceChanges": false
