@@ -206,7 +206,7 @@
          "Owner": "chinnachaitanya",
          "Repo": "cdkcodepipe",
          "Branch": "main",
-         "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
+         "OAuthToken": "{{resolve:secretsmanager:github-token1:SecretString:::}}",
          "PollForSourceChanges": false
         },
         "Name": "GitHub_Source",
@@ -261,7 +261,7 @@
          "Version": "1"
         },
         "Configuration": {
-         "StackName": "S3Stack",
+         "StackName": "S3Stack-test",
          "Capabilities": "CAPABILITY_NAMED_IAM",
          "RoleArn": {
           "Fn::GetAtt": [
@@ -270,7 +270,7 @@
           ]
          },
          "ActionMode": "CREATE_UPDATE",
-         "TemplatePath": "Artifact_Source_GitHub_Source::S3Stack-test.template.json"
+         "TemplatePath": "Artifact_Source_GitHub_Source::cdk.out/S3Stack-test.template.json"
         },
         "InputArtifacts": [
          {
@@ -294,7 +294,7 @@
          "Version": "1"
         },
         "Configuration": {
-         "StackName": "LambdaStack",
+         "StackName": "LambdaStack-test",
          "Capabilities": "CAPABILITY_NAMED_IAM",
          "RoleArn": {
           "Fn::GetAtt": [
@@ -303,7 +303,7 @@
           ]
          },
          "ActionMode": "CREATE_UPDATE",
-         "TemplatePath": "Artifact_Source_GitHub_Source::LambdaStack-test.template.json"
+         "TemplatePath": "Artifact_Source_GitHub_Source::cdk.out/LambdaStack-test.template.json"
         },
         "InputArtifacts": [
          {
@@ -337,7 +337,7 @@
    "Properties": {
     "Authentication": "GITHUB_HMAC",
     "AuthenticationConfiguration": {
-     "SecretToken": "{{resolve:secretsmanager:github-token:SecretString:::}}"
+     "SecretToken": "{{resolve:secretsmanager:github-token1:SecretString:::}}"
     },
     "Filters": [
      {
@@ -485,7 +485,7 @@
         "cloudformation:ValidateTemplate"
        ],
        "Effect": "Allow",
-       "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/S3Stack/*"
+       "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/S3Stack-test/*"
       }
      ],
      "Version": "2012-10-17"
@@ -651,7 +651,7 @@
         "cloudformation:ValidateTemplate"
        ],
        "Effect": "Allow",
-       "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/LambdaStack/*"
+       "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/LambdaStack-test/*"
       }
      ],
      "Version": "2012-10-17"

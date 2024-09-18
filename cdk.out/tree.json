@@ -402,7 +402,7 @@
                               "Owner": "chinnachaitanya",
                               "Repo": "cdkcodepipe",
                               "Branch": "main",
-                              "OAuthToken": "{{resolve:secretsmanager:github-token:SecretString:::}}",
+                              "OAuthToken": "{{resolve:secretsmanager:github-token1:SecretString:::}}",
                               "PollForSourceChanges": false
                             },
                             "runOrder": 1
@@ -457,7 +457,7 @@
                               "provider": "CloudFormation"
                             },
                             "configuration": {
-                              "StackName": "S3Stack",
+                              "StackName": "S3Stack-test",
                               "Capabilities": "CAPABILITY_NAMED_IAM",
                               "RoleArn": {
                                 "Fn::GetAtt": [
@@ -466,7 +466,7 @@
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::S3Stack-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::cdk.out/S3Stack-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
@@ -490,7 +490,7 @@
                               "provider": "CloudFormation"
                             },
                             "configuration": {
-                              "StackName": "LambdaStack",
+                              "StackName": "LambdaStack-test",
                               "Capabilities": "CAPABILITY_NAMED_IAM",
                               "RoleArn": {
                                 "Fn::GetAtt": [
@@ -499,7 +499,7 @@
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::LambdaStack-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::cdk.out/LambdaStack-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
@@ -535,7 +535,7 @@
                           "aws:cdk:cloudformation:props": {
                             "authentication": "GITHUB_HMAC",
                             "authenticationConfiguration": {
-                              "secretToken": "{{resolve:secretsmanager:github-token:SecretString:::}}"
+                              "secretToken": "{{resolve:secretsmanager:github-token1:SecretString:::}}"
                             },
                             "filters": [
                               {
@@ -795,7 +795,7 @@
                                             "cloudformation:ValidateTemplate"
                                           ],
                                           "Effect": "Allow",
-                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/S3Stack/*"
+                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/S3Stack-test/*"
                                         }
                                       ],
                                       "Version": "2012-10-17"
@@ -1055,7 +1055,7 @@
                                             "cloudformation:ValidateTemplate"
                                           ],
                                           "Effect": "Allow",
-                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/LambdaStack/*"
+                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/LambdaStack-test/*"
                                         }
                                       ],
                                       "Version": "2012-10-17"
