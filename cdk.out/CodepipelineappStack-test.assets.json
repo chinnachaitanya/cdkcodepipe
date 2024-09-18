@@ -1,0 +1,20 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "ae5a3fb495ae59a6e2181bae290ac19050e70c1b68a94d1d156ec84c90c95a44": {
+      "source": {
+        "path": "CodepipelineappStack-test.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "011528270026-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-011528270026-us-east-1",
+          "objectKey": "ae5a3fb495ae59a6e2181bae290ac19050e70c1b68a94d1d156ec84c90c95a44.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-file-publishing-role-011528270026-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
