@@ -173,6 +173,7 @@ export class CodepipelineappStack extends cdk.Stack {
       ],
     });
 
+    
     // Define the deploy stage for Lambda and S3 stacks
     pipeline.addStage({
       stageName: 'Deploy',
@@ -180,13 +181,13 @@ export class CodepipelineappStack extends cdk.Stack {
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'S3_Stack_Deploy',
           stackName: 'S3Stack',
-          templatePath: sourceOutput.atPath('S3Stack.template.json'),
+          templatePath: sourceOutput.atPath('S3Stack-test.template.json'),
           adminPermissions: true,
         }),
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'Lambda_Stack_Deploy',
           stackName: 'LambdaStack',
-          templatePath: sourceOutput.atPath('LambdaStack.template.json'),
+          templatePath: sourceOutput.atPath('LambdaStack-test.template.json'),
           adminPermissions: true,
         }),
       ],
