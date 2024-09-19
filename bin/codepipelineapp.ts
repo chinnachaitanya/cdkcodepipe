@@ -26,6 +26,7 @@ const s3Stack = new S3Stack(app, `S3Stack-${environment}`, {
     account: process.env.CDK_DEFAULT_ACCOUNT,
     region: process.env.CDK_DEFAULT_REGION,
   },
+  
 });
 
 // // Create the Lambda stack
