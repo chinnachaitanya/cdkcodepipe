@@ -152,7 +152,7 @@ export class CodepipelineappStack extends cdk.Stack {
             commands: ['npm install', 'npm install -g aws-cdk '],
           },
           build: {
-            commands: ['npm run build', 'cdk synth --output ./cdk1.out',
+            commands: ['npm run build', 'cdk synth --output ./cdk.out',
               'echo "The template path is: ${CODEBUILD_SRC_DIR}/cdk1.out/LambdaStack4-test.template.json"',
               'ls -l ${CODEBUILD_SRC_DIR}/cdk1.out/LambdaStack4-test.template.json', // List file details
             ],
