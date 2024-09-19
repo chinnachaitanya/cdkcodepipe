@@ -159,7 +159,7 @@ export class CodepipelineappStack extends cdk.Stack {
           },
         },
         artifacts: {
-          'base-directory': 'cdk1.out',
+          'base-directory': 'cdk.out',
           files: ['**/*'],
         },
       }),
@@ -188,14 +188,14 @@ export class CodepipelineappStack extends cdk.Stack {
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'S3_Stack_Deploy',
           stackName: 'S3Stack7-test',
-          templatePath: sourceOutput.atPath('cdk1.out/S3Stack7-test.template.json'),
+          templatePath: sourceOutput.atPath('cdk.out/S3Stack7-test.template.json'),
           adminPermissions: true,
         }),
         
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'Lambda_Stack_Deploy',
           stackName: 'LambdaStack7-test',
-          templatePath: sourceOutput.atPath('cdk1.out/LambdaStack7-test.template.json'),
+          templatePath: sourceOutput.atPath('cdk.out/LambdaStack7-test.template.json'),
           adminPermissions: true,
         }),
       ],
