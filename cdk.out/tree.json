@@ -466,7 +466,7 @@
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::S3Stack5-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::cdk1.out/S3Stack5-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
@@ -499,7 +499,7 @@
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::LambdaStack4-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::cdk1.out/LambdaStack4-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
@@ -1409,7 +1409,7 @@
                     },
                     "source": {
                       "type": "CODEPIPELINE",
-                      "buildSpec": "{\n  \"version\": 0.2,\n  \"phases\": {\n    \"install\": {\n      \"runtime-versions\": {\n        \"nodejs\": \"14\"\n      },\n      \"commands\": [\n        \"npm install\",\n        \"npm install -g aws-cdk \"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\",\n        \"cdk synth --output ./cdk1.out\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk1.out\",\n    \"files\": [\n      \"**/*\"\n    ]\n  }\n}"
+                      "buildSpec": "{\n  \"version\": 0.2,\n  \"phases\": {\n    \"install\": {\n      \"runtime-versions\": {\n        \"nodejs\": \"14\"\n      },\n      \"commands\": [\n        \"npm install\",\n        \"npm install -g aws-cdk \"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\",\n        \"cdk synth --output ./cdk1.out\",\n        \"echo \\\"The template path is: ${CODEBUILD_SRC_DIR}/cdk1.out/LambdaStack4-test.template.json\\\"\",\n        \"ls -l ${CODEBUILD_SRC_DIR}/cdk1.out/LambdaStack4-test.template.json\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk1.out\",\n    \"files\": [\n      \"**/*\"\n    ]\n  }\n}"
                     }
                   }
                 },

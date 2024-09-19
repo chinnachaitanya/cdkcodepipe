@@ -152,7 +152,10 @@ export class CodepipelineappStack extends cdk.Stack {
             commands: ['npm install', 'npm install -g aws-cdk '],
           },
           build: {
-            commands: ['npm run build', 'cdk synth --output ./cdk1.out'],
+            commands: ['npm run build', 'cdk synth --output ./cdk1.out',
+              'echo "The template path is: ${CODEBUILD_SRC_DIR}/cdk1.out/LambdaStack4-test.template.json"',
+              'ls -l ${CODEBUILD_SRC_DIR}/cdk1.out/LambdaStack4-test.template.json', // List file details
+            ],
           },
         },
         artifacts: {
@@ -185,14 +188,14 @@ export class CodepipelineappStack extends cdk.Stack {
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'S3_Stack_Deploy',
           stackName: 'S3Stack4-test',
-          templatePath: sourceOutput.atPath('S3Stack5-test.template.json'),
+          templatePath: sourceOutput.atPath('cdk1.out/S3Stack5-test.template.json'),
           adminPermissions: true,
         }),
         
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'Lambda_Stack_Deploy',
           stackName: 'LambdaStack4-test',
-          templatePath: sourceOutput.atPath('LambdaStack4-test.template.json'),
+          templatePath: sourceOutput.atPath('cdk1.out/LambdaStack4-test.template.json'),
           adminPermissions: true,
         }),
       ],
