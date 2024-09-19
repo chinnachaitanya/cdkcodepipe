@@ -152,11 +152,11 @@ export class CodepipelineappStack extends cdk.Stack {
             commands: ['npm install', 'npm install -g aws-cdk '],
           },
           build: {
-            commands: ['npm run build', 'cdk synth --output ./cdk.out'],
+            commands: ['npm run build', 'cdk synth --output ./cdk1.out'],
           },
         },
         artifacts: {
-          'base-directory': 'cdk.out',
+          'base-directory': 'cdk1.out',
           files: ['**/*'],
         },
       }),
