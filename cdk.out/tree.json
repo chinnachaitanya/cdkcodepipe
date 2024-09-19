@@ -4,21 +4,21 @@
     "id": "App",
     "path": "",
     "children": {
-      "S3Stack1-test": {
-        "id": "S3Stack1-test",
-        "path": "S3Stack1-test",
+      "S3Stack5-test": {
+        "id": "S3Stack5-test",
+        "path": "S3Stack5-test",
         "children": {
           "SourceBucket": {
             "id": "SourceBucket",
-            "path": "S3Stack1-test/SourceBucket",
+            "path": "S3Stack5-test/SourceBucket",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "S3Stack1-test/SourceBucket/Resource",
+                "path": "S3Stack5-test/SourceBucket/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                   "aws:cdk:cloudformation:props": {
-                    "bucketName": "test-source-bucket-codepipeline"
+                    "bucketName": "my-test-source-bucket-pipeline"
                   }
                 },
                 "constructInfo": {
@@ -34,15 +34,15 @@
           },
           "DestinationBucket": {
             "id": "DestinationBucket",
-            "path": "S3Stack1-test/DestinationBucket",
+            "path": "S3Stack5-test/DestinationBucket",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "S3Stack1-test/DestinationBucket/Resource",
+                "path": "S3Stack5-test/DestinationBucket/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                   "aws:cdk:cloudformation:props": {
-                    "bucketName": "test-destination-bucket-codepipeline"
+                    "bucketName": "my-test-destination-bucket-pipeline"
                   }
                 },
                 "constructInfo": {
@@ -58,7 +58,7 @@
           },
           "SourceBucketNameOutput": {
             "id": "SourceBucketNameOutput",
-            "path": "S3Stack1-test/SourceBucketNameOutput",
+            "path": "S3Stack5-test/SourceBucketNameOutput",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.150.0"
@@ -66,7 +66,7 @@
           },
           "DestinationBucketNameOutput": {
             "id": "DestinationBucketNameOutput",
-            "path": "S3Stack1-test/DestinationBucketNameOutput",
+            "path": "S3Stack5-test/DestinationBucketNameOutput",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnOutput",
               "version": "2.150.0"
@@ -74,11 +74,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "S3Stack1-test/CDKMetadata",
+            "path": "S3Stack5-test/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "S3Stack1-test/CDKMetadata/Default",
+                "path": "S3Stack5-test/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.150.0"
@@ -92,7 +92,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "S3Stack1-test/BootstrapVersion",
+            "path": "S3Stack5-test/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.150.0"
@@ -100,7 +100,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "S3Stack1-test/CheckBootstrapVersion",
+            "path": "S3Stack5-test/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.150.0"
@@ -112,21 +112,21 @@
           "version": "2.150.0"
         }
       },
-      "CodepipelineappStack1-test": {
-        "id": "CodepipelineappStack1-test",
-        "path": "CodepipelineappStack1-test",
+      "CodepipelineappStack4-test": {
+        "id": "CodepipelineappStack4-test",
+        "path": "CodepipelineappStack4-test",
         "children": {
-          "MyPipeline": {
-            "id": "MyPipeline",
-            "path": "CodepipelineappStack1-test/MyPipeline",
+          "MyPipeline4": {
+            "id": "MyPipeline4",
+            "path": "CodepipelineappStack4-test/MyPipeline4",
             "children": {
               "ArtifactsBucket": {
                 "id": "ArtifactsBucket",
-                "path": "CodepipelineappStack1-test/MyPipeline/ArtifactsBucket",
+                "path": "CodepipelineappStack4-test/MyPipeline4/ArtifactsBucket",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "CodepipelineappStack1-test/MyPipeline/ArtifactsBucket/Resource",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/ArtifactsBucket/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                       "aws:cdk:cloudformation:props": {
@@ -154,16 +154,16 @@
                   },
                   "Policy": {
                     "id": "Policy",
-                    "path": "CodepipelineappStack1-test/MyPipeline/ArtifactsBucket/Policy",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/ArtifactsBucket/Policy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack1-test/MyPipeline/ArtifactsBucket/Policy/Resource",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/ArtifactsBucket/Policy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::BucketPolicy",
                           "aws:cdk:cloudformation:props": {
                             "bucket": {
-                              "Ref": "MyPipelineArtifactsBucket727923DD"
+                              "Ref": "MyPipeline4ArtifactsBucketD80E2652"
                             },
                             "policyDocument": {
                               "Statement": [
@@ -181,7 +181,7 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "MyPipelineArtifactsBucket727923DD",
+                                        "MyPipeline4ArtifactsBucketD80E2652",
                                         "Arn"
                                       ]
                                     },
@@ -191,7 +191,7 @@
                                         [
                                           {
                                             "Fn::GetAtt": [
-                                              "MyPipelineArtifactsBucket727923DD",
+                                              "MyPipeline4ArtifactsBucketD80E2652",
                                               "Arn"
                                             ]
                                           },
@@ -225,11 +225,11 @@
               },
               "Role": {
                 "id": "Role",
-                "path": "CodepipelineappStack1-test/MyPipeline/Role",
+                "path": "CodepipelineappStack4-test/MyPipeline4/Role",
                 "children": {
                   "ImportRole": {
                     "id": "ImportRole",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Role/ImportRole",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.150.0"
@@ -237,7 +237,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Role/Resource",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -262,11 +262,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Role/DefaultPolicy",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Role/DefaultPolicy/Resource",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -289,7 +289,7 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "MyPipelineArtifactsBucket727923DD",
+                                        "MyPipeline4ArtifactsBucketD80E2652",
                                         "Arn"
                                       ]
                                     },
@@ -299,7 +299,7 @@
                                         [
                                           {
                                             "Fn::GetAtt": [
-                                              "MyPipelineArtifactsBucket727923DD",
+                                              "MyPipeline4ArtifactsBucketD80E2652",
                                               "Arn"
                                             ]
                                           },
@@ -315,19 +315,19 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "MyPipelineBuildCodePipelineActionRole5CCD100A",
+                                        "MyPipeline4BuildCodePipelineActionRole2CB44380",
                                         "Arn"
                                       ]
                                     },
                                     {
                                       "Fn::GetAtt": [
-                                        "MyPipelineDeployLambdaStackDeployCodePipelineActionRole5C8EDF0A",
+                                        "MyPipeline4DeployLambdaStackDeployCodePipelineActionRoleE785741A",
                                         "Arn"
                                       ]
                                     },
                                     {
                                       "Fn::GetAtt": [
-                                        "MyPipelineDeployS3StackDeployCodePipelineActionRoleE5F7CE53",
+                                        "MyPipeline4DeployS3StackDeployCodePipelineActionRoleD1735161",
                                         "Arn"
                                       ]
                                     }
@@ -336,10 +336,10 @@
                               ],
                               "Version": "2012-10-17"
                             },
-                            "policyName": "MyPipelineRoleDefaultPolicy34F09EFA",
+                            "policyName": "MyPipeline4RoleDefaultPolicy5F48AB89",
                             "roles": [
                               {
-                                "Ref": "MyPipelineRoleC0D47CA4"
+                                "Ref": "MyPipeline4RoleAF5C290F"
                               }
                             ]
                           }
@@ -363,21 +363,21 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "CodepipelineappStack1-test/MyPipeline/Resource",
+                "path": "CodepipelineappStack4-test/MyPipeline4/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodePipeline::Pipeline",
                   "aws:cdk:cloudformation:props": {
                     "artifactStore": {
                       "type": "S3",
                       "location": {
-                        "Ref": "MyPipelineArtifactsBucket727923DD"
+                        "Ref": "MyPipeline4ArtifactsBucketD80E2652"
                       }
                     },
                     "name": "MyS3LambdaPipeline",
                     "pipelineType": "V2",
                     "roleArn": {
                       "Fn::GetAtt": [
-                        "MyPipelineRoleC0D47CA4",
+                        "MyPipeline4RoleAF5C290F",
                         "Arn"
                       ]
                     },
@@ -433,7 +433,7 @@
                             "runOrder": 1,
                             "roleArn": {
                               "Fn::GetAtt": [
-                                "MyPipelineBuildCodePipelineActionRole5CCD100A",
+                                "MyPipeline4BuildCodePipelineActionRole2CB44380",
                                 "Arn"
                               ]
                             }
@@ -457,21 +457,21 @@
                               "provider": "CloudFormation"
                             },
                             "configuration": {
-                              "StackName": "S3Stack-test",
+                              "StackName": "S3Stack4-test",
                               "Capabilities": "CAPABILITY_NAMED_IAM",
                               "RoleArn": {
                                 "Fn::GetAtt": [
-                                  "MyPipelineDeployS3StackDeployRoleF9AE1CFB",
+                                  "MyPipeline4DeployS3StackDeployRoleB4F559AE",
                                   "Arn"
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::cdk.out/S3Stack-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::S3Stack1-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
                               "Fn::GetAtt": [
-                                "MyPipelineDeployS3StackDeployCodePipelineActionRoleE5F7CE53",
+                                "MyPipeline4DeployS3StackDeployCodePipelineActionRoleD1735161",
                                 "Arn"
                               ]
                             }
@@ -490,21 +490,21 @@
                               "provider": "CloudFormation"
                             },
                             "configuration": {
-                              "StackName": "LambdaStack-test",
+                              "StackName": "LambdaStack4-test",
                               "Capabilities": "CAPABILITY_NAMED_IAM",
                               "RoleArn": {
                                 "Fn::GetAtt": [
-                                  "MyPipelineDeployLambdaStackDeployRole7C885FDB",
+                                  "MyPipeline4DeployLambdaStackDeployRole3A8EA2F4",
                                   "Arn"
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::cdk.out/LambdaStack-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::LambdaStack1-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
                               "Fn::GetAtt": [
-                                "MyPipelineDeployLambdaStackDeployCodePipelineActionRole5C8EDF0A",
+                                "MyPipeline4DeployLambdaStackDeployCodePipelineActionRoleE785741A",
                                 "Arn"
                               ]
                             }
@@ -521,15 +521,15 @@
               },
               "Source": {
                 "id": "Source",
-                "path": "CodepipelineappStack1-test/MyPipeline/Source",
+                "path": "CodepipelineappStack4-test/MyPipeline4/Source",
                 "children": {
                   "GitHub_Source": {
                     "id": "GitHub_Source",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Source/GitHub_Source",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Source/GitHub_Source",
                     "children": {
                       "WebhookResource": {
                         "id": "WebhookResource",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Source/GitHub_Source/WebhookResource",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Source/GitHub_Source/WebhookResource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::CodePipeline::Webhook",
                           "aws:cdk:cloudformation:props": {
@@ -546,7 +546,7 @@
                             "registerWithThirdParty": true,
                             "targetAction": "GitHub_Source",
                             "targetPipeline": {
-                              "Ref": "MyPipelineAED38ECF"
+                              "Ref": "MyPipeline4247C068D"
                             },
                             "targetPipelineVersion": 1
                           }
@@ -570,19 +570,19 @@
               },
               "Build": {
                 "id": "Build",
-                "path": "CodepipelineappStack1-test/MyPipeline/Build",
+                "path": "CodepipelineappStack4-test/MyPipeline4/Build",
                 "children": {
                   "Build": {
                     "id": "Build",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Build/Build",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Build/Build",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Build/Build/CodePipelineActionRole",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Build/Build/CodePipelineActionRole",
                         "children": {
                           "ImportCodePipelineActionRole": {
                             "id": "ImportCodePipelineActionRole",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Build/Build/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Build/Build/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -590,7 +590,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Build/Build/CodePipelineActionRole/Resource",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Build/Build/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -615,11 +615,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Build/Build/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack1-test/MyPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack4-test/MyPipeline4/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -642,10 +642,10 @@
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "MyPipelineBuildCodePipelineActionRoleDefaultPolicyE9A1941C",
+                                    "policyName": "MyPipeline4BuildCodePipelineActionRoleDefaultPolicyA28D8E4E",
                                     "roles": [
                                       {
-                                        "Ref": "MyPipelineBuildCodePipelineActionRole5CCD100A"
+                                        "Ref": "MyPipeline4BuildCodePipelineActionRole2CB44380"
                                       }
                                     ]
                                   }
@@ -681,19 +681,19 @@
               },
               "Deploy": {
                 "id": "Deploy",
-                "path": "CodepipelineappStack1-test/MyPipeline/Deploy",
+                "path": "CodepipelineappStack4-test/MyPipeline4/Deploy",
                 "children": {
                   "S3_Stack_Deploy": {
                     "id": "S3_Stack_Deploy",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/CodePipelineActionRole",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/CodePipelineActionRole",
                         "children": {
                           "ImportCodePipelineActionRole": {
                             "id": "ImportCodePipelineActionRole",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -701,7 +701,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/CodePipelineActionRole/Resource",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -726,7 +726,7 @@
                           },
                           "8389e75f-0810-4838-bf64-d6f85a95cf83": {
                             "id": "8389e75f-0810-4838-bf64-d6f85a95cf83",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/CodePipelineActionRole/8389e75f-0810-4838-bf64-d6f85a95cf83",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/CodePipelineActionRole/8389e75f-0810-4838-bf64-d6f85a95cf83",
                             "constructInfo": {
                               "fqn": "constructs.Construct",
                               "version": "10.3.0"
@@ -734,11 +734,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/CodePipelineActionRole/DefaultPolicy",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -749,7 +749,7 @@
                                           "Effect": "Allow",
                                           "Resource": {
                                             "Fn::GetAtt": [
-                                              "MyPipelineDeployS3StackDeployRoleF9AE1CFB",
+                                              "MyPipeline4DeployS3StackDeployRoleB4F559AE",
                                               "Arn"
                                             ]
                                           }
@@ -764,7 +764,7 @@
                                           "Resource": [
                                             {
                                               "Fn::GetAtt": [
-                                                "MyPipelineArtifactsBucket727923DD",
+                                                "MyPipeline4ArtifactsBucketD80E2652",
                                                 "Arn"
                                               ]
                                             },
@@ -774,7 +774,7 @@
                                                 [
                                                   {
                                                     "Fn::GetAtt": [
-                                                      "MyPipelineArtifactsBucket727923DD",
+                                                      "MyPipeline4ArtifactsBucketD80E2652",
                                                       "Arn"
                                                     ]
                                                   },
@@ -795,15 +795,15 @@
                                             "cloudformation:ValidateTemplate"
                                           ],
                                           "Effect": "Allow",
-                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/S3Stack-test/*"
+                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/S3Stack4-test/*"
                                         }
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "MyPipelineDeployS3StackDeployCodePipelineActionRoleDefaultPolicy861550B4",
+                                    "policyName": "MyPipeline4DeployS3StackDeployCodePipelineActionRoleDefaultPolicy7AFB815A",
                                     "roles": [
                                       {
-                                        "Ref": "MyPipelineDeployS3StackDeployCodePipelineActionRoleE5F7CE53"
+                                        "Ref": "MyPipeline4DeployS3StackDeployCodePipelineActionRoleD1735161"
                                       }
                                     ]
                                   }
@@ -827,11 +827,11 @@
                       },
                       "Role": {
                         "id": "Role",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/Role",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/Role",
                         "children": {
                           "ImportRole": {
                             "id": "ImportRole",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/Role/ImportRole",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/Role/ImportRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -839,7 +839,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/Role/Resource",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/Role/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -864,11 +864,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/Role/DefaultPolicy",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/Role/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack1-test/MyPipeline/Deploy/S3_Stack_Deploy/Role/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/S3_Stack_Deploy/Role/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -884,7 +884,7 @@
                                           "Resource": [
                                             {
                                               "Fn::GetAtt": [
-                                                "MyPipelineArtifactsBucket727923DD",
+                                                "MyPipeline4ArtifactsBucketD80E2652",
                                                 "Arn"
                                               ]
                                             },
@@ -894,7 +894,7 @@
                                                 [
                                                   {
                                                     "Fn::GetAtt": [
-                                                      "MyPipelineArtifactsBucket727923DD",
+                                                      "MyPipeline4ArtifactsBucketD80E2652",
                                                       "Arn"
                                                     ]
                                                   },
@@ -912,10 +912,10 @@
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "MyPipelineDeployS3StackDeployRoleDefaultPolicyACDF88E6",
+                                    "policyName": "MyPipeline4DeployS3StackDeployRoleDefaultPolicy7729DCBD",
                                     "roles": [
                                       {
-                                        "Ref": "MyPipelineDeployS3StackDeployRoleF9AE1CFB"
+                                        "Ref": "MyPipeline4DeployS3StackDeployRoleB4F559AE"
                                       }
                                     ]
                                   }
@@ -945,15 +945,15 @@
                   },
                   "Lambda_Stack_Deploy": {
                     "id": "Lambda_Stack_Deploy",
-                    "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy",
+                    "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy",
                     "children": {
                       "CodePipelineActionRole": {
                         "id": "CodePipelineActionRole",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole",
                         "children": {
                           "ImportCodePipelineActionRole": {
                             "id": "ImportCodePipelineActionRole",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/ImportCodePipelineActionRole",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/ImportCodePipelineActionRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -961,7 +961,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/Resource",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -986,7 +986,7 @@
                           },
                           "8389e75f-0810-4838-bf64-d6f85a95cf83": {
                             "id": "8389e75f-0810-4838-bf64-d6f85a95cf83",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/8389e75f-0810-4838-bf64-d6f85a95cf83",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/8389e75f-0810-4838-bf64-d6f85a95cf83",
                             "constructInfo": {
                               "fqn": "constructs.Construct",
                               "version": "10.3.0"
@@ -994,11 +994,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/DefaultPolicy",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/CodePipelineActionRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -1009,7 +1009,7 @@
                                           "Effect": "Allow",
                                           "Resource": {
                                             "Fn::GetAtt": [
-                                              "MyPipelineDeployLambdaStackDeployRole7C885FDB",
+                                              "MyPipeline4DeployLambdaStackDeployRole3A8EA2F4",
                                               "Arn"
                                             ]
                                           }
@@ -1024,7 +1024,7 @@
                                           "Resource": [
                                             {
                                               "Fn::GetAtt": [
-                                                "MyPipelineArtifactsBucket727923DD",
+                                                "MyPipeline4ArtifactsBucketD80E2652",
                                                 "Arn"
                                               ]
                                             },
@@ -1034,7 +1034,7 @@
                                                 [
                                                   {
                                                     "Fn::GetAtt": [
-                                                      "MyPipelineArtifactsBucket727923DD",
+                                                      "MyPipeline4ArtifactsBucketD80E2652",
                                                       "Arn"
                                                     ]
                                                   },
@@ -1055,15 +1055,15 @@
                                             "cloudformation:ValidateTemplate"
                                           ],
                                           "Effect": "Allow",
-                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/LambdaStack-test/*"
+                                          "Resource": "arn:aws:cloudformation:us-east-1:011528270026:stack/LambdaStack4-test/*"
                                         }
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "MyPipelineDeployLambdaStackDeployCodePipelineActionRoleDefaultPolicy7BB64AA3",
+                                    "policyName": "MyPipeline4DeployLambdaStackDeployCodePipelineActionRoleDefaultPolicyB1609824",
                                     "roles": [
                                       {
-                                        "Ref": "MyPipelineDeployLambdaStackDeployCodePipelineActionRole5C8EDF0A"
+                                        "Ref": "MyPipeline4DeployLambdaStackDeployCodePipelineActionRoleE785741A"
                                       }
                                     ]
                                   }
@@ -1087,11 +1087,11 @@
                       },
                       "Role": {
                         "id": "Role",
-                        "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/Role",
+                        "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/Role",
                         "children": {
                           "ImportRole": {
                             "id": "ImportRole",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/Role/ImportRole",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/Role/ImportRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -1099,7 +1099,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/Role/Resource",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/Role/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -1124,11 +1124,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/Role/DefaultPolicy",
+                            "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/Role/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack1-test/MyPipeline/Deploy/Lambda_Stack_Deploy/Role/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack4-test/MyPipeline4/Deploy/Lambda_Stack_Deploy/Role/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -1144,7 +1144,7 @@
                                           "Resource": [
                                             {
                                               "Fn::GetAtt": [
-                                                "MyPipelineArtifactsBucket727923DD",
+                                                "MyPipeline4ArtifactsBucketD80E2652",
                                                 "Arn"
                                               ]
                                             },
@@ -1154,7 +1154,7 @@
                                                 [
                                                   {
                                                     "Fn::GetAtt": [
-                                                      "MyPipelineArtifactsBucket727923DD",
+                                                      "MyPipeline4ArtifactsBucketD80E2652",
                                                       "Arn"
                                                     ]
                                                   },
@@ -1172,10 +1172,10 @@
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "MyPipelineDeployLambdaStackDeployRoleDefaultPolicy24218DA1",
+                                    "policyName": "MyPipeline4DeployLambdaStackDeployRoleDefaultPolicy10511935",
                                     "roles": [
                                       {
-                                        "Ref": "MyPipelineDeployLambdaStackDeployRole7C885FDB"
+                                        "Ref": "MyPipeline4DeployLambdaStackDeployRole3A8EA2F4"
                                       }
                                     ]
                                   }
@@ -1217,15 +1217,15 @@
           },
           "BuildProject": {
             "id": "BuildProject",
-            "path": "CodepipelineappStack1-test/BuildProject",
+            "path": "CodepipelineappStack4-test/BuildProject",
             "children": {
               "Role": {
                 "id": "Role",
-                "path": "CodepipelineappStack1-test/BuildProject/Role",
+                "path": "CodepipelineappStack4-test/BuildProject/Role",
                 "children": {
                   "ImportRole": {
                     "id": "ImportRole",
-                    "path": "CodepipelineappStack1-test/BuildProject/Role/ImportRole",
+                    "path": "CodepipelineappStack4-test/BuildProject/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.150.0"
@@ -1233,7 +1233,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "CodepipelineappStack1-test/BuildProject/Role/Resource",
+                    "path": "CodepipelineappStack4-test/BuildProject/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -1258,11 +1258,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "CodepipelineappStack1-test/BuildProject/Role/DefaultPolicy",
+                    "path": "CodepipelineappStack4-test/BuildProject/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack1-test/BuildProject/Role/DefaultPolicy/Resource",
+                        "path": "CodepipelineappStack4-test/BuildProject/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -1333,7 +1333,7 @@
                                   "Resource": [
                                     {
                                       "Fn::GetAtt": [
-                                        "MyPipelineArtifactsBucket727923DD",
+                                        "MyPipeline4ArtifactsBucketD80E2652",
                                         "Arn"
                                       ]
                                     },
@@ -1343,7 +1343,7 @@
                                         [
                                           {
                                             "Fn::GetAtt": [
-                                              "MyPipelineArtifactsBucket727923DD",
+                                              "MyPipeline4ArtifactsBucketD80E2652",
                                               "Arn"
                                             ]
                                           },
@@ -1383,7 +1383,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "CodepipelineappStack1-test/BuildProject/Resource",
+                "path": "CodepipelineappStack4-test/BuildProject/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::CodeBuild::Project",
                   "aws:cdk:cloudformation:props": {
@@ -1396,7 +1396,7 @@
                     "encryptionKey": "alias/aws/s3",
                     "environment": {
                       "type": "LINUX_CONTAINER",
-                      "image": "aws/codebuild/standard:1.0",
+                      "image": "aws/codebuild/standard:6.0",
                       "imagePullCredentialsType": "CODEBUILD",
                       "privilegedMode": false,
                       "computeType": "BUILD_GENERAL1_SMALL"
@@ -1409,7 +1409,7 @@
                     },
                     "source": {
                       "type": "CODEPIPELINE",
-                      "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"dist\",\n    \"files\": [\n      \"**/*\"\n    ]\n  }\n}"
+                      "buildSpec": "{\n  \"version\": 0.2,\n  \"phases\": {\n    \"install\": {\n      \"runtime-versions\": {\n        \"nodejs\": \"14\"\n      },\n      \"commands\": [\n        \"npm install\",\n        \"npm install -g aws-cdk \"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"npm run build\",\n        \"cdk synth --output ./cdk.out\"\n      ]\n    }\n  },\n  \"artifacts\": {\n    \"base-directory\": \"cdk.out\",\n    \"files\": [\n      \"**/*\"\n    ]\n  }\n}"
                     }
                   }
                 },
@@ -1426,11 +1426,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "CodepipelineappStack1-test/CDKMetadata",
+            "path": "CodepipelineappStack4-test/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "CodepipelineappStack1-test/CDKMetadata/Default",
+                "path": "CodepipelineappStack4-test/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.150.0"
@@ -1444,7 +1444,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "CodepipelineappStack1-test/BootstrapVersion",
+            "path": "CodepipelineappStack4-test/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.150.0"
@@ -1452,7 +1452,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "CodepipelineappStack1-test/CheckBootstrapVersion",
+            "path": "CodepipelineappStack4-test/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.150.0"
@@ -1464,21 +1464,21 @@
           "version": "2.150.0"
         }
       },
-      "LambdaStack1-test": {
-        "id": "LambdaStack1-test",
-        "path": "LambdaStack1-test",
+      "LambdaStack4-test": {
+        "id": "LambdaStack4-test",
+        "path": "LambdaStack4-test",
         "children": {
           "SourceBucket": {
             "id": "SourceBucket",
-            "path": "LambdaStack1-test/SourceBucket",
+            "path": "LambdaStack4-test/SourceBucket",
             "children": {
               "Notifications": {
                 "id": "Notifications",
-                "path": "LambdaStack1-test/SourceBucket/Notifications",
+                "path": "LambdaStack4-test/SourceBucket/Notifications",
                 "children": {
                   "Resource": {
                     "id": "Resource",
-                    "path": "LambdaStack1-test/SourceBucket/Notifications/Resource",
+                    "path": "LambdaStack4-test/SourceBucket/Notifications/Resource",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnResource",
                       "version": "2.150.0"
@@ -1490,9 +1490,9 @@
                   "version": "10.3.0"
                 }
               },
-              "AllowBucketNotificationsToLambdaStack1testS3LambdaHandlerF5734D02": {
-                "id": "AllowBucketNotificationsToLambdaStack1testS3LambdaHandlerF5734D02",
-                "path": "LambdaStack1-test/SourceBucket/AllowBucketNotificationsToLambdaStack1testS3LambdaHandlerF5734D02",
+              "AllowBucketNotificationsToLambdaStack4testS3LambdaHandler83E987C9": {
+                "id": "AllowBucketNotificationsToLambdaStack4testS3LambdaHandler83E987C9",
+                "path": "LambdaStack4-test/SourceBucket/AllowBucketNotificationsToLambdaStack4testS3LambdaHandler83E987C9",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                   "aws:cdk:cloudformation:props": {
@@ -1505,7 +1505,7 @@
                     },
                     "principal": "s3.amazonaws.com",
                     "sourceAccount": "011528270026",
-                    "sourceArn": "arn:aws:s3:::test-source-bucket-codepipeline"
+                    "sourceArn": "arn:aws:s3:::my-test-source-bucket-pipeline"
                   }
                 },
                 "constructInfo": {
@@ -1521,7 +1521,7 @@
           },
           "DestinationBucket": {
             "id": "DestinationBucket",
-            "path": "LambdaStack1-test/DestinationBucket",
+            "path": "LambdaStack4-test/DestinationBucket",
             "constructInfo": {
               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
               "version": "2.150.0"
@@ -1529,15 +1529,15 @@
           },
           "S3LambdaHandler": {
             "id": "S3LambdaHandler",
-            "path": "LambdaStack1-test/S3LambdaHandler",
+            "path": "LambdaStack4-test/S3LambdaHandler",
             "children": {
               "ServiceRole": {
                 "id": "ServiceRole",
-                "path": "LambdaStack1-test/S3LambdaHandler/ServiceRole",
+                "path": "LambdaStack4-test/S3LambdaHandler/ServiceRole",
                 "children": {
                   "ImportServiceRole": {
                     "id": "ImportServiceRole",
-                    "path": "LambdaStack1-test/S3LambdaHandler/ServiceRole/ImportServiceRole",
+                    "path": "LambdaStack4-test/S3LambdaHandler/ServiceRole/ImportServiceRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.150.0"
@@ -1545,7 +1545,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "LambdaStack1-test/S3LambdaHandler/ServiceRole/Resource",
+                    "path": "LambdaStack4-test/S3LambdaHandler/ServiceRole/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -1584,11 +1584,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "LambdaStack1-test/S3LambdaHandler/ServiceRole/DefaultPolicy",
+                    "path": "LambdaStack4-test/S3LambdaHandler/ServiceRole/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "LambdaStack1-test/S3LambdaHandler/ServiceRole/DefaultPolicy/Resource",
+                        "path": "LambdaStack4-test/S3LambdaHandler/ServiceRole/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -1601,8 +1601,8 @@
                                   ],
                                   "Effect": "Allow",
                                   "Resource": [
-                                    "arn:aws:s3:::test-destination-bucket-codepipeline/*",
-                                    "arn:aws:s3:::test-source-bucket-codepipeline/*"
+                                    "arn:aws:s3:::my-test-destination-bucket-pipeline/*",
+                                    "arn:aws:s3:::my-test-source-bucket-pipeline/*"
                                   ]
                                 },
                                 {
@@ -1613,8 +1613,8 @@
                                   ],
                                   "Effect": "Allow",
                                   "Resource": [
-                                    "arn:aws:s3:::test-source-bucket-codepipeline",
-                                    "arn:aws:s3:::test-source-bucket-codepipeline/*"
+                                    "arn:aws:s3:::my-test-source-bucket-pipeline",
+                                    "arn:aws:s3:::my-test-source-bucket-pipeline/*"
                                   ]
                                 },
                                 {
@@ -1629,8 +1629,8 @@
                                   ],
                                   "Effect": "Allow",
                                   "Resource": [
-                                    "arn:aws:s3:::test-destination-bucket-codepipeline",
-                                    "arn:aws:s3:::test-destination-bucket-codepipeline/*"
+                                    "arn:aws:s3:::my-test-destination-bucket-pipeline",
+                                    "arn:aws:s3:::my-test-destination-bucket-pipeline/*"
                                   ]
                                 }
                               ],
@@ -1663,11 +1663,11 @@
               },
               "Code": {
                 "id": "Code",
-                "path": "LambdaStack1-test/S3LambdaHandler/Code",
+                "path": "LambdaStack4-test/S3LambdaHandler/Code",
                 "children": {
                   "Stage": {
                     "id": "Stage",
-                    "path": "LambdaStack1-test/S3LambdaHandler/Code/Stage",
+                    "path": "LambdaStack4-test/S3LambdaHandler/Code/Stage",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.AssetStaging",
                       "version": "2.150.0"
@@ -1675,7 +1675,7 @@
                   },
                   "AssetBucket": {
                     "id": "AssetBucket",
-                    "path": "LambdaStack1-test/S3LambdaHandler/Code/AssetBucket",
+                    "path": "LambdaStack4-test/S3LambdaHandler/Code/AssetBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.150.0"
@@ -1689,7 +1689,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "LambdaStack1-test/S3LambdaHandler/Resource",
+                "path": "LambdaStack4-test/S3LambdaHandler/Resource",
                 "attributes": {
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
@@ -1699,7 +1699,7 @@
                     },
                     "environment": {
                       "variables": {
-                        "DESTINATION_BUCKET": "test-destination-bucket-codepipeline"
+                        "DESTINATION_BUCKET": "my-test-destination-bucket-pipeline"
                       }
                     },
                     "handler": "handler.handler",
@@ -1725,15 +1725,15 @@
           },
           "BucketNotificationsHandler050a0587b7544547bf325f094a3db834": {
             "id": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
-            "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+            "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
             "children": {
               "Role": {
                 "id": "Role",
-                "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
+                "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
                 "children": {
                   "ImportRole": {
                     "id": "ImportRole",
-                    "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/ImportRole",
+                    "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/ImportRole",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.Resource",
                       "version": "2.150.0"
@@ -1741,7 +1741,7 @@
                   },
                   "Resource": {
                     "id": "Resource",
-                    "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
+                    "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
                     "attributes": {
                       "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                       "aws:cdk:cloudformation:props": {
@@ -1780,11 +1780,11 @@
                   },
                   "DefaultPolicy": {
                     "id": "DefaultPolicy",
-                    "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
+                    "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
+                        "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                           "aws:cdk:cloudformation:props": {
@@ -1828,7 +1828,7 @@
               },
               "Resource": {
                 "id": "Resource",
-                "path": "LambdaStack1-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource",
+                "path": "LambdaStack4-test/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.150.0"
@@ -1842,11 +1842,11 @@
           },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "LambdaStack1-test/CDKMetadata",
+            "path": "LambdaStack4-test/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "LambdaStack1-test/CDKMetadata/Default",
+                "path": "LambdaStack4-test/CDKMetadata/Default",
                 "constructInfo": {
                   "fqn": "aws-cdk-lib.CfnResource",
                   "version": "2.150.0"
@@ -1860,7 +1860,7 @@
           },
           "BootstrapVersion": {
             "id": "BootstrapVersion",
-            "path": "LambdaStack1-test/BootstrapVersion",
+            "path": "LambdaStack4-test/BootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnParameter",
               "version": "2.150.0"
@@ -1868,7 +1868,7 @@
           },
           "CheckBootstrapVersion": {
             "id": "CheckBootstrapVersion",
-            "path": "LambdaStack1-test/CheckBootstrapVersion",
+            "path": "LambdaStack4-test/CheckBootstrapVersion",
             "constructInfo": {
               "fqn": "aws-cdk-lib.CfnRule",
               "version": "2.150.0"
