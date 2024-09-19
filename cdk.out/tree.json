@@ -466,7 +466,7 @@
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::S3Stack5-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::S3Stack-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
@@ -499,7 +499,7 @@
                                 ]
                               },
                               "ActionMode": "CREATE_UPDATE",
-                              "TemplatePath": "Artifact_Source_GitHub_Source::LambdaStack4-test.template.json"
+                              "TemplatePath": "Artifact_Source_GitHub_Source::LambdaStack-test.template.json"
                             },
                             "runOrder": 1,
                             "roleArn": {
