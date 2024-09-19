@@ -148,7 +148,7 @@ export class CodepipelineappStack extends cdk.Stack {
         version: 0.2,
         phases: {
           install: {
-            'runtime-versions': 'nodejs: 14',
+            'runtime-versions': {nodejs: '14',},
             commands: ['npm install', 'npm install -g aws-cdk '],
           },
           build: {
@@ -160,6 +160,9 @@ export class CodepipelineappStack extends cdk.Stack {
           files: ['**/*'],
         },
       }),
+      environment: {
+        buildImage: codebuild.LinuxBuildImage.STANDARD_6_0, // Use managed image standard 6.0
+      },
     });
 
     // Add build stage to the pipeline
