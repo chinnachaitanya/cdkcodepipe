@@ -188,6 +188,7 @@ export class CodepipelineappStack extends cdk.Stack {
           templatePath: sourceOutput.atPath('S3Stack-test.template.json'),
           adminPermissions: true,
         }),
+        
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'Lambda_Stack_Deploy',
           stackName: 'LambdaStack4-test',
