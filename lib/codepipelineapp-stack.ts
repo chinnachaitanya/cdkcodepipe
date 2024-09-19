@@ -145,17 +145,18 @@ export class CodepipelineappStack extends cdk.Stack {
     // Define the build stage (optional, if Lambda assets need building)
     const buildProject = new codebuild.PipelineProject(this, 'BuildProject', {
       buildSpec: codebuild.BuildSpec.fromObject({
-        version: '0.2',
+        version: 0.2,
         phases: {
           install: {
-            commands: ['npm install'],
+            'runtime-versions': 'nodejs: 14',
+            commands: ['npm install', 'npm install -g aws-cdk '],
           },
           build: {
-            commands: ['npm run build'],
+            commands: ['npm run build', 'cdk synth --output ./cdk.out'],
           },
         },
         artifacts: {
-          'base-directory': 'dist',
+          'base-directory': 'cdk.out',
           files: ['**/*'],
         },
       }),
@@ -181,13 +182,13 @@ export class CodepipelineappStack extends cdk.Stack {
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'S3_Stack_Deploy',
           stackName: 'S3Stack-test',
-          templatePath: sourceOutput.atPath('cdk.out/S3Stack-test.template.json'),
+          templatePath: sourceOutput.atPath('S3Stack1-test.template.json'),
           adminPermissions: true,
         }),
         new codepipeline_actions.CloudFormationCreateUpdateStackAction({
           actionName: 'Lambda_Stack_Deploy',
           stackName: 'LambdaStack-test',
-          templatePath: sourceOutput.atPath('cdk.out/LambdaStack-test.template.json'),
+          templatePath: sourceOutput.atPath('LambdaStack1-test.template.json'),
           adminPermissions: true,
         }),
       ],
