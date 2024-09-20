@@ -1,0 +1,187 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "CodepipelineappStack8testTestStageLambdaStack867207891.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CodepipelineappStack8testTestStageLambdaStack867207891.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CodepipelineappStack8testTestStageLambdaStack867207891": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://011528270026/us-east-1",
+      "properties": {
+        "templateFile": "CodepipelineappStack8testTestStageLambdaStack867207891.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-cfn-exec-role-011528270026-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-011528270026-us-east-1/8b1b4f245d795f92a6f449f072dbfaf777e2fda2034582a748b11965c69bcc82.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CodepipelineappStack8testTestStageLambdaStack867207891.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-lookup-role-011528270026-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "TestStage-LambdaStack8"
+      },
+      "dependencies": [
+        "CodepipelineappStack8testTestStageLambdaStack867207891.assets"
+      ],
+      "metadata": {
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/SourceBucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceBucketNotifications0A6F2084"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testTestStageLambdaStack8S3LambdaHandlerA7EDE557": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceBucketAllowBucketNotificationsToCodepipelineappStack8testTestStageLambdaStack8S3LambdaHandlerA7EDE5578686618F"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/S3LambdaHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3LambdaHandlerServiceRole16A48A12"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/S3LambdaHandler/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3LambdaHandlerServiceRoleDefaultPolicyD12EAEF5"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/S3LambdaHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3LambdaHandler7F265C94"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/LambdaStack8/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CodepipelineappStack8-test/TestStage/LambdaStack8"
+    },
+    "CodepipelineappStack8testTestStageS3Stack8C59F31BA.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CodepipelineappStack8testTestStageS3Stack8C59F31BA.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CodepipelineappStack8testTestStageS3Stack8C59F31BA": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://011528270026/us-east-1",
+      "properties": {
+        "templateFile": "CodepipelineappStack8testTestStageS3Stack8C59F31BA.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": true,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-cfn-exec-role-011528270026-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-011528270026-us-east-1/defa391fb977edd0b6685734f82024c2465344c695c781f44e24ada265cdb8df.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CodepipelineappStack8testTestStageS3Stack8C59F31BA.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-lookup-role-011528270026-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "TestStage-S3Stack8"
+      },
+      "dependencies": [
+        "CodepipelineappStack8testTestStageS3Stack8C59F31BA.assets"
+      ],
+      "metadata": {
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/SourceBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceBucketDDD2130A"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/DestinationBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DestinationBucket4BECDB47"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/SourceBucketNameOutput": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceBucketNameOutput"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/DestinationBucketNameOutput": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DestinationBucketNameOutput"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CodepipelineappStack8-test/TestStage/S3Stack8/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CodepipelineappStack8-test/TestStage/S3Stack8"
+    }
+  }
+}
