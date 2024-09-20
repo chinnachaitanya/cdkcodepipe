@@ -20,7 +20,7 @@ exports.handler = async function(event) {
     });
     const getObjectResponse = await s3.send(getObjectCommand);
 
-    console.log("really really Object successfully retrieved from source bucket:", getObjectResponse);
+    console.log("really really really Object successfully retrieved from source bucket:", getObjectResponse);
 
     // Upload object to destination bucket
     const upload = new Upload({
