@@ -72,7 +72,7 @@ export class LambdaStack extends cdk.Stack {
     const destinationBucket = s3.Bucket.fromBucketName(this, 'DestinationBucket', props.destinationBucketName);
 
     // Create Lambda function
-    const lambdaFunction = new lambda.Function(this, 'S3LambdaHandler1', {
+    const lambdaFunction = new lambda.Function(this, 'S3LambdaHandler', {
       runtime: lambda.Runtime.NODEJS_18_X,
       code: lambda.Code.fromAsset('lambda'),
       handler: 'handler.handler',
