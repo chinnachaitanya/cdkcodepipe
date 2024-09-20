@@ -1317,7 +1317,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"1594241ce9474b2416a3a1185f5f3b1ac4e2bc5120c6bf0faabb702de121589f:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"a8db3784b3269ee738ab71d8f1aea081153793746d006907e4a34f0877fab3c0:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     }
    },
