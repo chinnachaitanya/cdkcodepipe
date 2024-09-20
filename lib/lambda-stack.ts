@@ -81,6 +81,15 @@ export class LambdaStack extends cdk.Stack {
       },
     });
 
+    const lambdaFunction2 = new lambda.Function(this, 'S3LambdaHandlernew', {
+      runtime: lambda.Runtime.NODEJS_18_X,
+      code: lambda.Code.fromAsset('lambda'),
+      handler: 'handler1.handler1',
+      environment: {
+        DESTINATION_BUCKET: destinationBucket.bucketName,
+      },
+    });
+
     // Attach permissions to Lambda
     lambdaFunction.addToRolePolicy(new iam.PolicyStatement({
       actions: ["s3:GetObject", "s3:PutObject"],
@@ -96,5 +105,7 @@ export class LambdaStack extends cdk.Stack {
 
     // Set up event notification for Lambda
     sourceBucket.addEventNotification(s3.EventType.OBJECT_CREATED, new s3n.LambdaDestination(lambdaFunction));
+    sourceBucket.addEventNotification(s3.EventType.OBJECT_CREATED, new s3n.LambdaDestination(lambdaFunction2));
+  
   }
 }
