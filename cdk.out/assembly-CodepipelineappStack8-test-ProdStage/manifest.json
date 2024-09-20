@@ -18,7 +18,7 @@
         "validateOnSynth": true,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::011528270026:role/cdk-hnb659fds-cfn-exec-role-011528270026-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-011528270026-us-east-1/8340e2eb7f534e90533f75ea7f0b81b01eb62c83e7cbd90cabe9fef33ad1dc2a.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-011528270026-us-east-1/38f180072ce04c76d3869fa91861b8495e7624c0709e4d77cb52741326a844f6.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -47,6 +47,12 @@
             "data": "SourceBucketAllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3250C2DDB"
           }
         ],
+        "/CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlernewA7705114": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceBucketAllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlernewA7705114F1120066"
+          }
+        ],
         "/CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -63,6 +69,18 @@
           {
             "type": "aws:cdk:logicalId",
             "data": "S3LambdaHandler7F265C94"
+          }
+        ],
+        "/CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3LambdaHandlernewServiceRole242F89A1"
+          }
+        ],
+        "/CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "S3LambdaHandlernewD0B75ED4"
           }
         ],
         "/CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [

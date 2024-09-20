@@ -361,12 +361,7 @@
          ]
         },
         "RunOrder": 1
-       }
-      ],
-      "Name": "Assets"
-     },
-     {
-      "Actions": [
+       },
        {
         "ActionTypeId": {
          "Category": "Build",
@@ -376,15 +371,15 @@
         },
         "Configuration": {
          "ProjectName": {
-          "Ref": "Pipeline8PipelineTestStageRunUnitTests434A4439"
+          "Ref": "Pipeline8AssetsFileAsset21E02C25B"
          }
         },
         "InputArtifacts": [
          {
-          "Name": "chinnachaitanya_cdkcodepipe_Source"
+          "Name": "Synth_Output"
          }
         ],
-        "Name": "RunUnitTests",
+        "Name": "FileAsset2",
         "RoleArn": {
          "Fn::GetAtt": [
           "Pipeline8CodeBuildActionRole18B974CB",
@@ -392,155 +387,9 @@
          ]
         },
         "RunOrder": 1
-       },
-       {
-        "ActionTypeId": {
-         "Category": "Deploy",
-         "Owner": "AWS",
-         "Provider": "CloudFormation",
-         "Version": "1"
-        },
-        "Configuration": {
-         "StackName": "TestStage-LambdaStack8",
-         "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
-         "RoleArn": {
-          "Fn::Join": [
-           "",
-           [
-            "arn:",
-            {
-             "Ref": "AWS::Partition"
-            },
-            ":iam::011528270026:role/cdk-hnb659fds-cfn-exec-role-011528270026-us-east-1"
-           ]
-          ]
-         },
-         "ActionMode": "CHANGE_SET_REPLACE",
-         "ChangeSetName": "PipelineChange",
-         "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-TestStage/CodepipelineappStack8testTestStageLambdaStack867207891.template.json"
-        },
-        "InputArtifacts": [
-         {
-          "Name": "Synth_Output"
-         }
-        ],
-        "Name": "LambdaStack8.Prepare",
-        "RoleArn": {
-         "Fn::Join": [
-          "",
-          [
-           "arn:",
-           {
-            "Ref": "AWS::Partition"
-           },
-           ":iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1"
-          ]
-         ]
-        },
-        "RunOrder": 2
-       },
-       {
-        "ActionTypeId": {
-         "Category": "Deploy",
-         "Owner": "AWS",
-         "Provider": "CloudFormation",
-         "Version": "1"
-        },
-        "Configuration": {
-         "StackName": "TestStage-S3Stack8",
-         "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
-         "RoleArn": {
-          "Fn::Join": [
-           "",
-           [
-            "arn:",
-            {
-             "Ref": "AWS::Partition"
-            },
-            ":iam::011528270026:role/cdk-hnb659fds-cfn-exec-role-011528270026-us-east-1"
-           ]
-          ]
-         },
-         "ActionMode": "CHANGE_SET_REPLACE",
-         "ChangeSetName": "PipelineChange",
-         "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-TestStage/CodepipelineappStack8testTestStageS3Stack8C59F31BA.template.json"
-        },
-        "InputArtifacts": [
-         {
-          "Name": "Synth_Output"
-         }
-        ],
-        "Name": "S3Stack8.Prepare",
-        "RoleArn": {
-         "Fn::Join": [
-          "",
-          [
-           "arn:",
-           {
-            "Ref": "AWS::Partition"
-           },
-           ":iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1"
-          ]
-         ]
-        },
-        "RunOrder": 2
-       },
-       {
-        "ActionTypeId": {
-         "Category": "Deploy",
-         "Owner": "AWS",
-         "Provider": "CloudFormation",
-         "Version": "1"
-        },
-        "Configuration": {
-         "StackName": "TestStage-LambdaStack8",
-         "ActionMode": "CHANGE_SET_EXECUTE",
-         "ChangeSetName": "PipelineChange"
-        },
-        "Name": "LambdaStack8.Deploy",
-        "RoleArn": {
-         "Fn::Join": [
-          "",
-          [
-           "arn:",
-           {
-            "Ref": "AWS::Partition"
-           },
-           ":iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1"
-          ]
-         ]
-        },
-        "RunOrder": 3
-       },
-       {
-        "ActionTypeId": {
-         "Category": "Deploy",
-         "Owner": "AWS",
-         "Provider": "CloudFormation",
-         "Version": "1"
-        },
-        "Configuration": {
-         "StackName": "TestStage-S3Stack8",
-         "ActionMode": "CHANGE_SET_EXECUTE",
-         "ChangeSetName": "PipelineChange"
-        },
-        "Name": "S3Stack8.Deploy",
-        "RoleArn": {
-         "Fn::Join": [
-          "",
-          [
-           "arn:",
-           {
-            "Ref": "AWS::Partition"
-           },
-           ":iam::011528270026:role/cdk-hnb659fds-deploy-role-011528270026-us-east-1"
-          ]
-         ]
-        },
-        "RunOrder": 3
        }
       ],
-      "Name": "TestStage"
+      "Name": "Assets"
      },
      {
       "Actions": [
@@ -917,163 +766,6 @@
     "aws:cdk:path": "CodepipelineappStack8-test/Pipeline8/Pipeline/Build/Synth/CdkBuildProject/Resource"
    }
   },
-  "Pipeline8PipelineTestStageRunUnitTestsRole7DF71FB7": {
-   "Type": "AWS::IAM::Role",
-   "Properties": {
-    "AssumeRolePolicyDocument": {
-     "Statement": [
-      {
-       "Action": "sts:AssumeRole",
-       "Effect": "Allow",
-       "Principal": {
-        "Service": "codebuild.amazonaws.com"
-       }
-      }
-     ],
-     "Version": "2012-10-17"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CodepipelineappStack8-test/Pipeline8/Pipeline/TestStage/RunUnitTests/RunUnitTests/Role/Resource"
-   }
-  },
-  "Pipeline8PipelineTestStageRunUnitTestsRoleDefaultPolicyAC0936AB": {
-   "Type": "AWS::IAM::Policy",
-   "Properties": {
-    "PolicyDocument": {
-     "Statement": [
-      {
-       "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-       ],
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::Join": [
-          "",
-          [
-           "arn:aws:logs:us-east-1:011528270026:log-group:/aws/codebuild/",
-           {
-            "Ref": "Pipeline8PipelineTestStageRunUnitTests434A4439"
-           },
-           ":*"
-          ]
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           "arn:aws:logs:us-east-1:011528270026:log-group:/aws/codebuild/",
-           {
-            "Ref": "Pipeline8PipelineTestStageRunUnitTests434A4439"
-           }
-          ]
-         ]
-        }
-       ]
-      },
-      {
-       "Action": [
-        "codebuild:BatchPutCodeCoverages",
-        "codebuild:BatchPutTestCases",
-        "codebuild:CreateReport",
-        "codebuild:CreateReportGroup",
-        "codebuild:UpdateReport"
-       ],
-       "Effect": "Allow",
-       "Resource": {
-        "Fn::Join": [
-         "",
-         [
-          "arn:aws:codebuild:us-east-1:011528270026:report-group/",
-          {
-           "Ref": "Pipeline8PipelineTestStageRunUnitTests434A4439"
-          },
-          "-*"
-         ]
-        ]
-       }
-      },
-      {
-       "Action": [
-        "s3:GetBucket*",
-        "s3:GetObject*",
-        "s3:List*"
-       ],
-       "Effect": "Allow",
-       "Resource": [
-        {
-         "Fn::GetAtt": [
-          "Pipeline8PipelineArtifactsBucketE8276F84",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::Join": [
-          "",
-          [
-           {
-            "Fn::GetAtt": [
-             "Pipeline8PipelineArtifactsBucketE8276F84",
-             "Arn"
-            ]
-           },
-           "/*"
-          ]
-         ]
-        }
-       ]
-      }
-     ],
-     "Version": "2012-10-17"
-    },
-    "PolicyName": "Pipeline8PipelineTestStageRunUnitTestsRoleDefaultPolicyAC0936AB",
-    "Roles": [
-     {
-      "Ref": "Pipeline8PipelineTestStageRunUnitTestsRole7DF71FB7"
-     }
-    ]
-   },
-   "Metadata": {
-    "aws:cdk:path": "CodepipelineappStack8-test/Pipeline8/Pipeline/TestStage/RunUnitTests/RunUnitTests/Role/DefaultPolicy/Resource"
-   }
-  },
-  "Pipeline8PipelineTestStageRunUnitTests434A4439": {
-   "Type": "AWS::CodeBuild::Project",
-   "Properties": {
-    "Artifacts": {
-     "Type": "CODEPIPELINE"
-    },
-    "Cache": {
-     "Type": "NO_CACHE"
-    },
-    "Description": "Pipeline step CodepipelineappStack8-test/Pipeline/TestStage/RunUnitTests",
-    "EncryptionKey": "alias/aws/s3",
-    "Environment": {
-     "ComputeType": "BUILD_GENERAL1_SMALL",
-     "Image": "aws/codebuild/standard:7.0",
-     "ImagePullCredentialsType": "CODEBUILD",
-     "PrivilegedMode": false,
-     "Type": "LINUX_CONTAINER"
-    },
-    "ServiceRole": {
-     "Fn::GetAtt": [
-      "Pipeline8PipelineTestStageRunUnitTestsRole7DF71FB7",
-      "Arn"
-     ]
-    },
-    "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"build\": {\n      \"commands\": [\n        \"npm test\"\n      ]\n    }\n  }\n}",
-     "Type": "CODEPIPELINE"
-    }
-   },
-   "Metadata": {
-    "aws:cdk:path": "CodepipelineappStack8-test/Pipeline8/Pipeline/TestStage/RunUnitTests/RunUnitTests/Resource"
-   }
-  },
   "Pipeline8PipelineProdStageManualApprovalRole53B630AA": {
    "Type": "AWS::IAM::Role",
    "Properties": {
@@ -1277,6 +969,12 @@
         },
         {
          "Fn::GetAtt": [
+          "Pipeline8AssetsFileAsset21E02C25B",
+          "Arn"
+         ]
+        },
+        {
+         "Fn::GetAtt": [
           "Pipeline8PipelineBuildSynthCdkBuildProjectB139797D",
           "Arn"
          ]
@@ -1284,12 +982,6 @@
         {
          "Fn::GetAtt": [
           "Pipeline8PipelineProdStageManualApproval228867AF",
-          "Arn"
-         ]
-        },
-        {
-         "Fn::GetAtt": [
-          "Pipeline8PipelineTestStageRunUnitTests434A4439",
           "Arn"
          ]
         },
@@ -1625,12 +1317,45 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-TestStage/CodepipelineappStack8testTestStageLambdaStack867207891.assets.json\\\" --verbose publish \\\"1347d3d7ce9c59d21f9ab36d7d05b7aee2d6bd401427bad345d03c33725f71e6:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"1594241ce9474b2416a3a1185f5f3b1ac4e2bc5120c6bf0faabb702de121589f:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     }
    },
    "Metadata": {
     "aws:cdk:path": "CodepipelineappStack8-test/Pipeline8/Assets/FileAsset1/Resource"
+   }
+  },
+  "Pipeline8AssetsFileAsset21E02C25B": {
+   "Type": "AWS::CodeBuild::Project",
+   "Properties": {
+    "Artifacts": {
+     "Type": "CODEPIPELINE"
+    },
+    "Cache": {
+     "Type": "NO_CACHE"
+    },
+    "Description": "Pipeline step CodepipelineappStack8-test/Pipeline/Assets/FileAsset2",
+    "EncryptionKey": "alias/aws/s3",
+    "Environment": {
+     "ComputeType": "BUILD_GENERAL1_SMALL",
+     "Image": "aws/codebuild/standard:7.0",
+     "ImagePullCredentialsType": "CODEBUILD",
+     "PrivilegedMode": false,
+     "Type": "LINUX_CONTAINER"
+    },
+    "ServiceRole": {
+     "Fn::GetAtt": [
+      "Pipeline8AssetsFileRole0A13F112",
+      "Arn"
+     ]
+    },
+    "Source": {
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"55bb3688b5982a126ba69c8d797df5447a7d48880bc8eff67c425524175e4a6c:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
+     "Type": "CODEPIPELINE"
+    }
+   },
+   "Metadata": {
+    "aws:cdk:path": "CodepipelineappStack8-test/Pipeline8/Assets/FileAsset2/Resource"
    }
   },
   "CDKMetadata": {
