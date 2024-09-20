@@ -179,7 +179,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-011528270026-us-east-1",
-     "S3Key": "a8db3784b3269ee738ab71d8f1aea081153793746d006907e4a34f0877fab3c0.zip"
+     "S3Key": "71f07d1a2fd0e686f1a0bd10172b2a522e159fee519a7d5e4b4d715dcc8a415e.zip"
     },
     "Environment": {
      "Variables": {
@@ -201,7 +201,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Resource",
-    "aws:asset:path": "../asset.a8db3784b3269ee738ab71d8f1aea081153793746d006907e4a34f0877fab3c0",
+    "aws:asset:path": "../asset.71f07d1a2fd0e686f1a0bd10172b2a522e159fee519a7d5e4b4d715dcc8a415e",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
