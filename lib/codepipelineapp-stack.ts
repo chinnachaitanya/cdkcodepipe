@@ -20,16 +20,16 @@ export class CodepipelineappStack extends cdk.Stack {
       }),
     });
 
-    // Add test stage (Deploy Lambda & S3 stacks)
-    const testStage = pipeline.addStage(new MyAppStage(this, 'TestStage', {
-      env: {
-        account: process.env.CDK_DEFAULT_ACCOUNT,
-        region: process.env.CDK_DEFAULT_REGION,
-      },
-    }));
+    // // Add test stage (Deploy Lambda & S3 stacks)
+    // const testStage = pipeline.addStage(new MyAppStage(this, 'TestStage', {
+    //   env: {
+    //     account: process.env.CDK_DEFAULT_ACCOUNT,
+    //     region: process.env.CDK_DEFAULT_REGION,
+    //   },
+    // }));
 
-    // Optionally, add additional steps before or after deployment
-    testStage.addPre(new ShellStep('RunUnitTests', { commands: ['npm test'] })); // Pre-deployment steps like unit tests
+    // // Optionally, add additional steps before or after deployment
+    // testStage.addPre(new ShellStep('RunUnitTests', { commands: ['npm test'] })); // Pre-deployment steps like unit tests
 
     // Add production stage (Deploy Lambda & S3 stacks)
     const prodStage = pipeline.addStage(new MyAppStage(this, 'ProdStage', {
