@@ -71,11 +71,8 @@ export class LambdaStack extends cdk.Stack {
     const sourceBucket = s3.Bucket.fromBucketName(this, 'SourceBucket', props.sourceBucketName);
     const destinationBucket = s3.Bucket.fromBucketName(this, 'DestinationBucket', props.destinationBucketName);
 
-    // Unique identifier, you can use a timestamp or a version number
-    const version = new Date().toISOString(); // or a version number like 'v1', 'v2', etc.
-
     // Create Lambda function
-    const lambdaFunction = new lambda.Function(this, 'S3LambdaHandler-${version}', {
+    const lambdaFunction = new lambda.Function(this, 'S3LambdaHandler', {
       runtime: lambda.Runtime.NODEJS_18_X,
       code: lambda.Code.fromAsset('lambda'),
       handler: 'handler.handler',

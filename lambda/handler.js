@@ -4,7 +4,8 @@ const s3 = new S3Client();
 
 exports.handler = async function(event) {
   console.log("Event received:", JSON.stringify(event, null, 2));
-
+  const version = new Date().toISOString();
+  console.log("Deployment version:", version);
   const sourceBucket = event.Records[0].s3.bucket.name;
   const objectKey = event.Records[0].s3.object.key;
 

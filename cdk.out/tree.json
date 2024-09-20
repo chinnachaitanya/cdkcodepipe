@@ -1951,16 +1951,16 @@
                           "version": "10.3.0"
                         }
                       },
-                      "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3": {
-                        "id": "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3",
+                      "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlerversion3CA8C496": {
+                        "id": "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlerversion3CA8C496",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlerversion3CA8C496",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                           "aws:cdk:cloudformation:props": {
                             "action": "lambda:InvokeFunction",
                             "functionName": {
                               "Fn::GetAtt": [
-                                "S3LambdaHandler7F265C94",
+                                "S3LambdaHandlerversionA129DB89",
                                 "Arn"
                               ]
                             },
@@ -2011,17 +2011,17 @@
                       "version": "2.150.0"
                     }
                   },
-                  "S3LambdaHandler": {
-                    "id": "S3LambdaHandler",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler",
+                  "S3LambdaHandler-${version}": {
+                    "id": "S3LambdaHandler-${version}",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}",
                     "children": {
                       "ServiceRole": {
                         "id": "ServiceRole",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/ServiceRole",
                         "children": {
                           "ImportServiceRole": {
                             "id": "ImportServiceRole",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/ImportServiceRole",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -2029,7 +2029,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/Resource",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/ServiceRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -2068,11 +2068,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/DefaultPolicy",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/ServiceRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/ServiceRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -2120,10 +2120,10 @@
                                       ],
                                       "Version": "2012-10-17"
                                     },
-                                    "policyName": "S3LambdaHandlerServiceRoleDefaultPolicyD12EAEF5",
+                                    "policyName": "S3LambdaHandlerversionServiceRoleDefaultPolicyB8C4B5AC",
                                     "roles": [
                                       {
-                                        "Ref": "S3LambdaHandlerServiceRole16A48A12"
+                                        "Ref": "S3LambdaHandlerversionServiceRole42228F1B"
                                       }
                                     ]
                                   }
@@ -2147,11 +2147,11 @@
                       },
                       "Code": {
                         "id": "Code",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Code",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/Code",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Code/Stage",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
                               "version": "2.150.0"
@@ -2159,7 +2159,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Code/AssetBucket",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                               "version": "2.150.0"
@@ -2173,7 +2173,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Resource",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler-${version}/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                           "aws:cdk:cloudformation:props": {
@@ -2189,7 +2189,7 @@
                             "handler": "handler.handler",
                             "role": {
                               "Fn::GetAtt": [
-                                "S3LambdaHandlerServiceRole16A48A12",
+                                "S3LambdaHandlerversionServiceRole42228F1B",
                                 "Arn"
                               ]
                             },
