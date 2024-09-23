@@ -427,7 +427,7 @@
          "Version": "1"
         },
         "Configuration": {
-         "StackName": "ProdStage-LambdaStack-ProdStage",
+         "StackName": "ProdStage-LambdaStack8",
          "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
          "RoleArn": {
           "Fn::Join": [
@@ -443,14 +443,14 @@
          },
          "ActionMode": "CHANGE_SET_REPLACE",
          "ChangeSetName": "PipelineChange",
-         "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStackProdStageA77DEE14.template.json"
+         "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.template.json"
         },
         "InputArtifacts": [
          {
           "Name": "Synth_Output"
          }
         ],
-        "Name": "LambdaStack-ProdStage.Prepare",
+        "Name": "LambdaStack8.Prepare",
         "RoleArn": {
          "Fn::Join": [
           "",
@@ -473,7 +473,7 @@
          "Version": "1"
         },
         "Configuration": {
-         "StackName": "ProdStage-S3Stack-ProdStage",
+         "StackName": "ProdStage-S3Stack8",
          "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
          "RoleArn": {
           "Fn::Join": [
@@ -489,14 +489,14 @@
          },
          "ActionMode": "CHANGE_SET_REPLACE",
          "ChangeSetName": "PipelineChange",
-         "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageS3StackProdStageC89E41F5.template.json"
+         "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageS3Stack8FE9631DA.template.json"
         },
         "InputArtifacts": [
          {
           "Name": "Synth_Output"
          }
         ],
-        "Name": "S3Stack-ProdStage.Prepare",
+        "Name": "S3Stack8.Prepare",
         "RoleArn": {
          "Fn::Join": [
           "",
@@ -519,11 +519,11 @@
          "Version": "1"
         },
         "Configuration": {
-         "StackName": "ProdStage-LambdaStack-ProdStage",
+         "StackName": "ProdStage-LambdaStack8",
          "ActionMode": "CHANGE_SET_EXECUTE",
          "ChangeSetName": "PipelineChange"
         },
-        "Name": "LambdaStack-ProdStage.Deploy",
+        "Name": "LambdaStack8.Deploy",
         "RoleArn": {
          "Fn::Join": [
           "",
@@ -546,11 +546,11 @@
          "Version": "1"
         },
         "Configuration": {
-         "StackName": "ProdStage-S3Stack-ProdStage",
+         "StackName": "ProdStage-S3Stack8",
          "ActionMode": "CHANGE_SET_EXECUTE",
          "ChangeSetName": "PipelineChange"
         },
-        "Name": "S3Stack-ProdStage.Deploy",
+        "Name": "S3Stack8.Deploy",
         "RoleArn": {
          "Fn::Join": [
           "",
@@ -1317,7 +1317,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStackProdStageA77DEE14.assets.json\\\" --verbose publish \\\"71f07d1a2fd0e686f1a0bd10172b2a522e159fee519a7d5e4b4d715dcc8a415e:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"71f07d1a2fd0e686f1a0bd10172b2a522e159fee519a7d5e4b4d715dcc8a415e:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     }
    },
@@ -1350,7 +1350,7 @@
      ]
     },
     "Source": {
-     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStackProdStageA77DEE14.assets.json\\\" --verbose publish \\\"55bb3688b5982a126ba69c8d797df5447a7d48880bc8eff67c425524175e4a6c:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
+     "BuildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"55bb3688b5982a126ba69c8d797df5447a7d48880bc8eff67c425524175e4a6c:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}",
      "Type": "CODEPIPELINE"
     }
    },

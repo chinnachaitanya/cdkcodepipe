@@ -13,11 +13,8 @@ export class MyAppStage extends cdk.Stage {
     const configFilePath = path.join(__dirname, `../config/config-test.json`);
     const config = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'));
 
-    // Use the stage name or environment to make the stack names unique
-    const stageName = this.stageName || 'default';
-
-    // Add Lambda and S3 stacks to this stage with unique names
-    new LambdaStack(this, `LambdaStack-${stageName}`, {
+    // Add Lambda and S3 stacks to this stage
+    new LambdaStack(this, 'LambdaStack8', {
         sourceBucketName: config.sourceBucketName,
         destinationBucketName: config.destinationBucketName,
         env: {
@@ -25,33 +22,13 @@ export class MyAppStage extends cdk.Stage {
             region: process.env.CDK_DEFAULT_REGION,
         }
     }); // Define Lambda stack
-
-    new S3Stack(this, `S3Stack-${stageName}`, {
+    new S3Stack(this, 'S3Stack8', {
         sourceBucketName: config.sourceBucketName,
         destinationBucketName: config.destinationBucketName,
         env: {
             account: process.env.CDK_DEFAULT_ACCOUNT,
             region: process.env.CDK_DEFAULT_REGION,
         }
-    }); // Define S3 stack
+    });       // Define S3 stack
   }
 }
-//     // Add Lambda and S3 stacks to this stage
-//     new LambdaStack(this, 'LambdaStack8', {
-//         sourceBucketName: config.sourceBucketName,
-//         destinationBucketName: config.destinationBucketName,
-//         env: {
-//             account: process.env.CDK_DEFAULT_ACCOUNT,
-//             region: process.env.CDK_DEFAULT_REGION,
-//         }
-//     }); // Define Lambda stack
-//     new S3Stack(this, 'S3Stack8', {
-//         sourceBucketName: config.sourceBucketName,
-//         destinationBucketName: config.destinationBucketName,
-//         env: {
-//             account: process.env.CDK_DEFAULT_ACCOUNT,
-//             region: process.env.CDK_DEFAULT_REGION,
-//         }
-//     });       // Define S3 stack
-//   }
-// }

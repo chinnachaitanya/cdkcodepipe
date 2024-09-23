@@ -10,10 +10,6 @@ const app = new cdk.App();
 // Define the environment
 const environment = app.node.tryGetContext('env') || 'test';
 
-// Load configuration specific to the environment
-const configFilePath = path.join(__dirname, `../config/config-${environment}.json`);
-const config = JSON.parse(fs.readFileSync(configFilePath, 'utf-8'));
-
 // Create the CodePipeline stack
 const pipelineStack = new CodepipelineappStack(app, `CodepipelineappStack8-${environment}`, {
   env: {
