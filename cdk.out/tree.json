@@ -506,7 +506,7 @@
                                 }
                               },
                               {
-                                "name": "LambdaStack8.Prepare",
+                                "name": "LambdaStack-ProdStage.Prepare",
                                 "inputArtifacts": [
                                   {
                                     "name": "Synth_Output"
@@ -519,7 +519,7 @@
                                   "provider": "CloudFormation"
                                 },
                                 "configuration": {
-                                  "StackName": "ProdStage-LambdaStack8",
+                                  "StackName": "ProdStage-LambdaStack-ProdStage",
                                   "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
                                   "RoleArn": {
                                     "Fn::Join": [
@@ -535,7 +535,7 @@
                                   },
                                   "ActionMode": "CHANGE_SET_REPLACE",
                                   "ChangeSetName": "PipelineChange",
-                                  "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.template.json"
+                                  "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStackProdStageA77DEE14.template.json"
                                 },
                                 "runOrder": 2,
                                 "roleArn": {
@@ -552,7 +552,7 @@
                                 }
                               },
                               {
-                                "name": "S3Stack8.Prepare",
+                                "name": "S3Stack-ProdStage.Prepare",
                                 "inputArtifacts": [
                                   {
                                     "name": "Synth_Output"
@@ -565,7 +565,7 @@
                                   "provider": "CloudFormation"
                                 },
                                 "configuration": {
-                                  "StackName": "ProdStage-S3Stack8",
+                                  "StackName": "ProdStage-S3Stack-ProdStage",
                                   "Capabilities": "CAPABILITY_NAMED_IAM,CAPABILITY_AUTO_EXPAND",
                                   "RoleArn": {
                                     "Fn::Join": [
@@ -581,7 +581,7 @@
                                   },
                                   "ActionMode": "CHANGE_SET_REPLACE",
                                   "ChangeSetName": "PipelineChange",
-                                  "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageS3Stack8FE9631DA.template.json"
+                                  "TemplatePath": "Synth_Output::assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageS3StackProdStageC89E41F5.template.json"
                                 },
                                 "runOrder": 2,
                                 "roleArn": {
@@ -598,7 +598,7 @@
                                 }
                               },
                               {
-                                "name": "LambdaStack8.Deploy",
+                                "name": "LambdaStack-ProdStage.Deploy",
                                 "actionTypeId": {
                                   "category": "Deploy",
                                   "version": "1",
@@ -606,7 +606,7 @@
                                   "provider": "CloudFormation"
                                 },
                                 "configuration": {
-                                  "StackName": "ProdStage-LambdaStack8",
+                                  "StackName": "ProdStage-LambdaStack-ProdStage",
                                   "ActionMode": "CHANGE_SET_EXECUTE",
                                   "ChangeSetName": "PipelineChange"
                                 },
@@ -625,7 +625,7 @@
                                 }
                               },
                               {
-                                "name": "S3Stack8.Deploy",
+                                "name": "S3Stack-ProdStage.Deploy",
                                 "actionTypeId": {
                                   "category": "Deploy",
                                   "version": "1",
@@ -633,7 +633,7 @@
                                   "provider": "CloudFormation"
                                 },
                                 "configuration": {
-                                  "StackName": "ProdStage-S3Stack8",
+                                  "StackName": "ProdStage-S3Stack-ProdStage",
                                   "ActionMode": "CHANGE_SET_EXECUTE",
                                   "ChangeSetName": "PipelineChange"
                                 },
@@ -1215,33 +1215,33 @@
                           "version": "10.3.0"
                         }
                       },
-                      "LambdaStack8.Prepare": {
-                        "id": "LambdaStack8.Prepare",
-                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/LambdaStack8.Prepare",
+                      "LambdaStack-ProdStage.Prepare": {
+                        "id": "LambdaStack-ProdStage.Prepare",
+                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/LambdaStack-ProdStage.Prepare",
                         "constructInfo": {
                           "fqn": "constructs.Construct",
                           "version": "10.3.0"
                         }
                       },
-                      "S3Stack8.Prepare": {
-                        "id": "S3Stack8.Prepare",
-                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/S3Stack8.Prepare",
+                      "S3Stack-ProdStage.Prepare": {
+                        "id": "S3Stack-ProdStage.Prepare",
+                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/S3Stack-ProdStage.Prepare",
                         "constructInfo": {
                           "fqn": "constructs.Construct",
                           "version": "10.3.0"
                         }
                       },
-                      "LambdaStack8.Deploy": {
-                        "id": "LambdaStack8.Deploy",
-                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/LambdaStack8.Deploy",
+                      "LambdaStack-ProdStage.Deploy": {
+                        "id": "LambdaStack-ProdStage.Deploy",
+                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/LambdaStack-ProdStage.Deploy",
                         "constructInfo": {
                           "fqn": "constructs.Construct",
                           "version": "10.3.0"
                         }
                       },
-                      "S3Stack8.Deploy": {
-                        "id": "S3Stack8.Deploy",
-                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/S3Stack8.Deploy",
+                      "S3Stack-ProdStage.Deploy": {
+                        "id": "S3Stack-ProdStage.Deploy",
+                        "path": "CodepipelineappStack8-test/Pipeline8/Pipeline/ProdStage/S3Stack-ProdStage.Deploy",
                         "constructInfo": {
                           "fqn": "constructs.Construct",
                           "version": "10.3.0"
@@ -1846,7 +1846,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"71f07d1a2fd0e686f1a0bd10172b2a522e159fee519a7d5e4b4d715dcc8a415e:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStackProdStageA77DEE14.assets.json\\\" --verbose publish \\\"71f07d1a2fd0e686f1a0bd10172b2a522e159fee519a7d5e4b4d715dcc8a415e:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}"
                             }
                           }
                         },
@@ -1894,7 +1894,7 @@
                             },
                             "source": {
                               "type": "CODEPIPELINE",
-                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStack86444438A.assets.json\\\" --verbose publish \\\"55bb3688b5982a126ba69c8d797df5447a7d48880bc8eff67c425524175e4a6c:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}"
+                              "buildSpec": "{\n  \"version\": \"0.2\",\n  \"phases\": {\n    \"install\": {\n      \"commands\": [\n        \"npm install -g cdk-assets@2\"\n      ]\n    },\n    \"build\": {\n      \"commands\": [\n        \"cdk-assets --path \\\"assembly-CodepipelineappStack8-test-ProdStage/CodepipelineappStack8testProdStageLambdaStackProdStageA77DEE14.assets.json\\\" --verbose publish \\\"55bb3688b5982a126ba69c8d797df5447a7d48880bc8eff67c425524175e4a6c:011528270026-us-east-1\\\"\"\n      ]\n    }\n  }\n}"
                             }
                           }
                         },
@@ -1925,21 +1925,21 @@
             "id": "ProdStage",
             "path": "CodepipelineappStack8-test/ProdStage",
             "children": {
-              "LambdaStack8": {
-                "id": "LambdaStack8",
-                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8",
+              "LambdaStack-ProdStage": {
+                "id": "LambdaStack-ProdStage",
+                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage",
                 "children": {
                   "SourceBucket": {
                     "id": "SourceBucket",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/SourceBucket",
                     "children": {
                       "Notifications": {
                         "id": "Notifications",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/Notifications",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/SourceBucket/Notifications",
                         "children": {
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/Notifications/Resource",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/SourceBucket/Notifications/Resource",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.CfnResource",
                               "version": "2.150.0"
@@ -1951,9 +1951,9 @@
                           "version": "10.3.0"
                         }
                       },
-                      "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3": {
-                        "id": "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandler4C8F3EF3",
+                      "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStackProdStageS3LambdaHandlerB192E1D3": {
+                        "id": "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStackProdStageS3LambdaHandlerB192E1D3",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStackProdStageS3LambdaHandlerB192E1D3",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                           "aws:cdk:cloudformation:props": {
@@ -1974,9 +1974,9 @@
                           "version": "2.150.0"
                         }
                       },
-                      "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlernewA7705114": {
-                        "id": "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlernewA7705114",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStack8S3LambdaHandlernewA7705114",
+                      "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStackProdStageS3LambdaHandlernewC8478075": {
+                        "id": "AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStackProdStageS3LambdaHandlernewC8478075",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/SourceBucket/AllowBucketNotificationsToCodepipelineappStack8testProdStageLambdaStackProdStageS3LambdaHandlernewC8478075",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::Permission",
                           "aws:cdk:cloudformation:props": {
@@ -2005,7 +2005,7 @@
                   },
                   "DestinationBucket": {
                     "id": "DestinationBucket",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/DestinationBucket",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/DestinationBucket",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                       "version": "2.150.0"
@@ -2013,15 +2013,15 @@
                   },
                   "S3LambdaHandler": {
                     "id": "S3LambdaHandler",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler",
                     "children": {
                       "ServiceRole": {
                         "id": "ServiceRole",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/ServiceRole",
                         "children": {
                           "ImportServiceRole": {
                             "id": "ImportServiceRole",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/ImportServiceRole",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -2029,7 +2029,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/Resource",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/ServiceRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -2068,11 +2068,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/DefaultPolicy",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/ServiceRole/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/ServiceRole/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/ServiceRole/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -2147,11 +2147,11 @@
                       },
                       "Code": {
                         "id": "Code",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Code",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/Code",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Code/Stage",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
                               "version": "2.150.0"
@@ -2159,7 +2159,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Code/AssetBucket",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                               "version": "2.150.0"
@@ -2173,7 +2173,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandler/Resource",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandler/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                           "aws:cdk:cloudformation:props": {
@@ -2209,15 +2209,15 @@
                   },
                   "S3LambdaHandlernew": {
                     "id": "S3LambdaHandlernew",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew",
                     "children": {
                       "ServiceRole": {
                         "id": "ServiceRole",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/ServiceRole",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/ServiceRole",
                         "children": {
                           "ImportServiceRole": {
                             "id": "ImportServiceRole",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/ServiceRole/ImportServiceRole",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/ServiceRole/ImportServiceRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -2225,7 +2225,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/ServiceRole/Resource",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/ServiceRole/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -2270,11 +2270,11 @@
                       },
                       "Code": {
                         "id": "Code",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/Code",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/Code",
                         "children": {
                           "Stage": {
                             "id": "Stage",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/Code/Stage",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/Code/Stage",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.AssetStaging",
                               "version": "2.150.0"
@@ -2282,7 +2282,7 @@
                           },
                           "AssetBucket": {
                             "id": "AssetBucket",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/Code/AssetBucket",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/Code/AssetBucket",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.aws_s3.BucketBase",
                               "version": "2.150.0"
@@ -2296,7 +2296,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/S3LambdaHandlernew/Resource",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/S3LambdaHandlernew/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                           "aws:cdk:cloudformation:props": {
@@ -2332,15 +2332,15 @@
                   },
                   "BucketNotificationsHandler050a0587b7544547bf325f094a3db834": {
                     "id": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834",
                     "children": {
                       "Role": {
                         "id": "Role",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role",
                         "children": {
                           "ImportRole": {
                             "id": "ImportRole",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/ImportRole",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/ImportRole",
                             "constructInfo": {
                               "fqn": "aws-cdk-lib.Resource",
                               "version": "2.150.0"
@@ -2348,7 +2348,7 @@
                           },
                           "Resource": {
                             "id": "Resource",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource",
                             "attributes": {
                               "aws:cdk:cloudformation:type": "AWS::IAM::Role",
                               "aws:cdk:cloudformation:props": {
@@ -2387,11 +2387,11 @@
                           },
                           "DefaultPolicy": {
                             "id": "DefaultPolicy",
-                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
+                            "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy",
                             "children": {
                               "Resource": {
                                 "id": "Resource",
-                                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
+                                "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource",
                                 "attributes": {
                                   "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
                                   "aws:cdk:cloudformation:props": {
@@ -2435,7 +2435,7 @@
                       },
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
                           "version": "2.150.0"
@@ -2449,11 +2449,11 @@
                   },
                   "CDKMetadata": {
                     "id": "CDKMetadata",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/CDKMetadata",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/CDKMetadata",
                     "children": {
                       "Default": {
                         "id": "Default",
-                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/CDKMetadata/Default",
+                        "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/CDKMetadata/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
                           "version": "2.150.0"
@@ -2467,7 +2467,7 @@
                   },
                   "BootstrapVersion": {
                     "id": "BootstrapVersion",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/BootstrapVersion",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/BootstrapVersion",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnParameter",
                       "version": "2.150.0"
@@ -2475,7 +2475,7 @@
                   },
                   "CheckBootstrapVersion": {
                     "id": "CheckBootstrapVersion",
-                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack8/CheckBootstrapVersion",
+                    "path": "CodepipelineappStack8-test/ProdStage/LambdaStack-ProdStage/CheckBootstrapVersion",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnRule",
                       "version": "2.150.0"
@@ -2487,17 +2487,17 @@
                   "version": "2.150.0"
                 }
               },
-              "S3Stack8": {
-                "id": "S3Stack8",
-                "path": "CodepipelineappStack8-test/ProdStage/S3Stack8",
+              "S3Stack-ProdStage": {
+                "id": "S3Stack-ProdStage",
+                "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage",
                 "children": {
                   "SourceBucket": {
                     "id": "SourceBucket",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/SourceBucket",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/SourceBucket",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/SourceBucket/Resource",
+                        "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/SourceBucket/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                           "aws:cdk:cloudformation:props": {
@@ -2517,11 +2517,11 @@
                   },
                   "DestinationBucket": {
                     "id": "DestinationBucket",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/DestinationBucket",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/DestinationBucket",
                     "children": {
                       "Resource": {
                         "id": "Resource",
-                        "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/DestinationBucket/Resource",
+                        "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/DestinationBucket/Resource",
                         "attributes": {
                           "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
                           "aws:cdk:cloudformation:props": {
@@ -2541,7 +2541,7 @@
                   },
                   "SourceBucketNameOutput": {
                     "id": "SourceBucketNameOutput",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/SourceBucketNameOutput",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/SourceBucketNameOutput",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnOutput",
                       "version": "2.150.0"
@@ -2549,7 +2549,7 @@
                   },
                   "DestinationBucketNameOutput": {
                     "id": "DestinationBucketNameOutput",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/DestinationBucketNameOutput",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/DestinationBucketNameOutput",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnOutput",
                       "version": "2.150.0"
@@ -2557,11 +2557,11 @@
                   },
                   "CDKMetadata": {
                     "id": "CDKMetadata",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/CDKMetadata",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/CDKMetadata",
                     "children": {
                       "Default": {
                         "id": "Default",
-                        "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/CDKMetadata/Default",
+                        "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/CDKMetadata/Default",
                         "constructInfo": {
                           "fqn": "aws-cdk-lib.CfnResource",
                           "version": "2.150.0"
@@ -2575,7 +2575,7 @@
                   },
                   "BootstrapVersion": {
                     "id": "BootstrapVersion",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/BootstrapVersion",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/BootstrapVersion",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnParameter",
                       "version": "2.150.0"
@@ -2583,7 +2583,7 @@
                   },
                   "CheckBootstrapVersion": {
                     "id": "CheckBootstrapVersion",
-                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack8/CheckBootstrapVersion",
+                    "path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/CheckBootstrapVersion",
                     "constructInfo": {
                       "fqn": "aws-cdk-lib.CfnRule",
                       "version": "2.150.0"

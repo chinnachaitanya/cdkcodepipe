@@ -1,30 +1,3 @@
-// import * as cdk from 'aws-cdk-lib';
-// import { Construct } from 'constructs';
-// import * as s3 from 'aws-cdk-lib/aws-s3';
-
-// interface S3StackProps extends cdk.StackProps {
-//     sourceBucketName: string;
-//     destinationBucketName: string;
-//   }
-
-// export class S3Stack extends cdk.Stack {
-//   public readonly sourceBucket: s3.Bucket;
-//   public readonly destinationBucket: s3.Bucket;
-
-//   constructor(scope: Construct, id: string, props: S3StackProps) {
-//     super(scope, id, props);
-
-//     // Source S3 bucket
-//     this.sourceBucket = new s3.Bucket(this, 'SourceBucket', {
-//       bucketName: props.sourceBucketName,
-//     });
-
-//     // Destination S3 bucket
-//     this.destinationBucket = new s3.Bucket(this, 'DestinationBucket', {
-//       bucketName: props.destinationBucketName,
-//     });
-//   }
-// }
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as s3 from 'aws-cdk-lib/aws-s3';

@@ -3,23 +3,23 @@
   "SourceBucketDDD2130A": {
    "Type": "AWS::S3::Bucket",
    "Properties": {
-    "BucketName": "my-test-source-bucket-pipeline7"
+    "BucketName": "my-test-source-bucket-pipeline8"
    },
    "UpdateReplacePolicy": "Retain",
    "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "CodepipelineappStack7-test/TestStage/S3Stack/SourceBucket/Resource"
+    "aws:cdk:path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/SourceBucket/Resource"
    }
   },
   "DestinationBucket4BECDB47": {
    "Type": "AWS::S3::Bucket",
    "Properties": {
-    "BucketName": "my-test-destination-bucket-pipeline7"
+    "BucketName": "my-test-destination-bucket-pipeline8"
    },
    "UpdateReplacePolicy": "Retain",
    "DeletionPolicy": "Retain",
    "Metadata": {
-    "aws:cdk:path": "CodepipelineappStack7-test/TestStage/S3Stack/DestinationBucket/Resource"
+    "aws:cdk:path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/DestinationBucket/Resource"
    }
   },
   "CDKMetadata": {
@@ -28,7 +28,7 @@
     "Analytics": "v2:deflate64:H4sIAAAAAAAA/yXIQQ5AMBBA0bPYt6MIB+AAEg4gVSOpUmI6LMTdBav/8lNIcgUq0idJMzg52x6uNmjjhD6powyuko3DIKrR/7pf1hw2/maDtPJu8BZ+HRAmio9UQVKAiiayVu7sg10Qmr8P5D1/U3EAAAA="
    },
    "Metadata": {
-    "aws:cdk:path": "CodepipelineappStack7-test/TestStage/S3Stack/CDKMetadata/Default"
+    "aws:cdk:path": "CodepipelineappStack8-test/ProdStage/S3Stack-ProdStage/CDKMetadata/Default"
    }
   }
  },
